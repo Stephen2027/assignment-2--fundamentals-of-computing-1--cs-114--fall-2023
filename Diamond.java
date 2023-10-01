@@ -8,5 +8,6 @@ public class Diamond {
     Scanner scan = new Scanner(System.in);
     a = scan.nextInt();
 
+    // generate diamond based on number inputed
   }
 }
