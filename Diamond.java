@@ -8,7 +8,7 @@ public class Diamond {
     Scanner scan = new Scanner(System.in);
     rowNmbr = scan.nextInt();
 
-    // generate diamond based on number inputed
+    // generate top half of diamond
     for(a = 0 ;a <= rowNmbr ; a++) {
       for(b = 1 ; b <= rowNmbr - a ; b++) {
         System.out.print(" ");
@@ -18,6 +18,7 @@ public class Diamond {
       }
       System.out.println("");
     }
+    // generate bottom half of diamond
     for(a = rowNmbr - 1 ; a >= 1 ; a--) {
       for(b = 1 ; b <= rowNmbr - a ; b++) {
         System.out.print(" ");
