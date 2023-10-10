@@ -8,25 +8,43 @@ public class Diamond {
     Scanner scan = new Scanner(System.in);
     rowNmbr = scan.nextInt();
 
-    // generate top half of diamond
-    for(a = 0 ;a <= rowNmbr ; a++) {
-      for(b = 1 ; b <= rowNmbr - a ; b++) {
-        System.out.print(" ");
-      }
-      for(b = 1 ; b <= 2*a-1 ; b++) {
-        System.out.print("*");
-      }
-      System.out.println("");
+    // Create top for diamond odd
+    if(rowNmbr > 2 && rowNmbr % 2 != 0);{
+        for (a = 1; a < rowNmbr; a += 2){
+            for (b = 0; b < rowNmbr - 1 - a / 2; b++) {
+                System.out.print(" ");
+        }
+        for (b = 0; b < a; b++) {
+            System.out.print("*");
+        }
+        System.out.println("");
     }
-    // generate bottom half of diamond
-    for(a = rowNmbr - 1 ; a >= 1 ; a--) {
-      for(b = 1 ; b <= rowNmbr - a ; b++) {
-        System.out.print(" ");
-      }
-      for (b = 1 ; b <= 2*a-1 ; b++) {
-        System.out.print("*");
-      }
-      System.out.println("");
+
+    // Create bottom of diamond for odd
+        for (a = rowNmbr; a > 0; a -= 2){
+            for ( b = 0; b < rowNmbr -1 - a / 2; b++) {
+                System.out.print(" ");
+        }
+        for ( b = 0; b < a; b++) {
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+    scan.close();
+    }
+    // Create top of diamond for even
+    if (rowNmbr > 2 && rowNmbr % 2 == 1); {
+        for (a = 1; a > rowNmbr; ++a ){
+            for (b = 0; b < rowNmbr; ++b){
+                System.out.print(" ");
+            }
+            for (b = 1; b < a; ++b){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+
     }
   }
 }
