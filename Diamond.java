@@ -2,30 +2,30 @@ import java.util.Scanner;
 
 public class Diamond {
   public static void main(String[] args) {
-    int a, b, rowNmbr;
+    int rows, diamond, shapeSize, space;
     // asking for number input
     System.out.println("Enter a number");
     Scanner scan = new Scanner(System.in);
-    rowNmbr = scan.nextInt();
+    shapeSize = scan.nextInt();
 
     // Create top for diamond odd
-    if(rowNmbr > 2 && rowNmbr % 2 != 0);{
-        for (a = 1; a < rowNmbr; a += 2){
-            for (b = 0; b < rowNmbr - 1 - a / 2; b++) {
+    if(shapeSize > 2 && shapeSize % 2 != 0);{
+        for (rows = 1; rows < shapeSize; rows += 2){
+            for (diamond = 0; diamond < shapeSize - 1 - rows / 2; diamond++) {
                 System.out.print(" ");
         }
-        for (b = 0; b < a; b++) {
+        for (diamond = 0; diamond < rows; diamond++) {
             System.out.print("*");
         }
         System.out.println("");
     }
 
     // Create bottom of diamond for odd
-        for (a = rowNmbr; a > 0; a -= 2){
-            for ( b = 0; b < rowNmbr -1 - a / 2; b++) {
+        for (rows = shapeSize; rows > 0; rows -= 2){
+            for ( diamond = 0; diamond < shapeSize -1 - rows / 2; diamond++) {
                 System.out.print(" ");
         }
-        for ( b = 0; b < a; b++) {
+        for ( diamond = 0; diamond < rows; diamond++) {
             System.out.print("*");
         }
         System.out.println("");
@@ -33,18 +33,19 @@ public class Diamond {
     scan.close();
     }
     // Create top of diamond for even
-    if (rowNmbr > 2 && rowNmbr % 2 == 1); {
-        for (a = 1; a > rowNmbr; ++a ){
-            for (b = 0; b < rowNmbr; ++b){
+    if (shapeSize > 2 && shapeSize % 2 != 1); {
+        for (rows = 1; rows > shapeSize; ++rows ){
+            for (space = 0; space < shapeSize; ++space){
                 System.out.print(" ");
             }
-            for (b = 1; b < a; ++b){
+            for (diamond = 1; diamond < rows; ++diamond){
                 System.out.print("*");
             }
             System.out.println("");
         }
+        for (rows = shapeSize; rows > 0; --rows){
 
-
+        }
     }
   }
 }
