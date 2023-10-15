@@ -22,10 +22,10 @@ public class Diamond {
 
     // Create bottom of diamond for odd
         for (rows = shapeSize; rows > 0; rows -= 2){
-            for ( diamond = 0; diamond < shapeSize - 1 - rows / 2; diamond++) {
+            for (diamond = 0; diamond < shapeSize - 1 - rows / 2; diamond++) {
                 System.out.print(" ");
         }
-        for ( diamond = 0; diamond < rows; diamond++) {
+        for (diamond = 0; diamond < rows; diamond++) {
             System.out.print("*");
         }
         System.out.println("");
@@ -33,12 +33,13 @@ public class Diamond {
     }
     // Create top of diamond for even
     else if (shapeSize %2 == 0) {
-      for (int spaces = shapeSize - 1; spaces > 0; spaces -= 1 ){
+      for (int spaces = shapeSize - 1; spaces > 0; spaces -= 1 ){ // creates correct number of spaces for first row
         System.out.print(" ");
       }
+      // Middle rows for top of even diamond
       System.out.println(" *");
         for (rows = 2; rows <= shapeSize/2 + 1; rows += 1){
-            for (int spaces = -2 * rows + (shapeSize + 2); spaces > 0; spaces -= 1){ // makes sure that there is the correct number of spaces printed
+            for (int spaces = -2 * rows + (shapeSize + 2); spaces > 0; spaces -= 1){ // prints the correct number of spaces before the " *" is printed
                 System.out.print(" ");
             }
             for (diamond = 2 * rows - 2; diamond > 0; diamond -= 1){
@@ -46,17 +47,18 @@ public class Diamond {
             }
             System.out.println("");
         }
-        // Create bottom of diamond for even
+        // Create middle rows for bottom of diamond for even
         for (rows = shapeSize/2; rows >= 2; rows--){
           for (int spaces = -2 * rows + (shapeSize + 2); spaces > 0; spaces -= 1){
             System.out.print(" ");
           }
-          for(diamond = 2 * rows - 2; diamond > 0; diamond -=1){
+          for(diamond = 2 * rows - 2; diamond > 0; diamond -=1){ // prints the correct number of " *" for each row
             System.out.print(" *");
           }
           System.out.println("");
 
         }
+        // Create last row for bottom of even numbers
         for (int spaces = shapeSize - 1; spaces > 0; spaces -= 1){
           System.out.print(" ");
         }
